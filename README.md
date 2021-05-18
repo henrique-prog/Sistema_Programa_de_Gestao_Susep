@@ -69,9 +69,11 @@ Uma vez criada a estrutura de banco de dados, é necessário fazer a importaçã
 
 Os perfis do sistema serão derivados da estrutura real do órgão. Desse modo, servidores que não tem função de chefia no órgão recebem valor null na coluna tipoFuncaoIdda tabela Pessoae deste modo terão habilitadas apenas funções de acompanhamento dos seus próprios planos de trabalho, ao passo que servidores com função de chefia poderão ter acesso aos planos de trabalho das suas respectivas equipes e terão acesso às funções de programas de gestão (cadastro, seleção, avaliação,etc). Servidores que trabalham na área de indicadores poderão, além de acompanhar seus próprios planos de trabalho, cadastrar as listas de atividades do órgão e dos demais setores.
 
-## Configurar gestores do sistema
+# Configurar gestores do sistema (1º Acesso)
 
-Em determinadas situações como, por exemplo, no caso fictício em que o titular da unidade está de férias e o substituto de licença, pode ser necessário ter pessoas no órgão com acesso total ao sistema para evitar que o trabalho do setor fique parado. Para suprir tal necessidade, existe o perfil Gestor com controle total da ferramenta. O cadastro de gestores do sistema é feito na tabela **CatalogoDominio**. Basta inserir um registro nessa tabela com a coluna classificação preenchida com o valor **‘GestorSistema’** e a coluna descrição preenchida com o id da pessoa que terá perfil de gestor.
+Em determinadas situações como, por exemplo, no caso fictício em que o titular da unidade está de férias e o substituto de licença, pode ser necessário ter pessoas no órgão com acesso total ao sistema para evitar que o trabalho do setor fique parado. Para suprir tal necessidade, existe o perfil Gestor com controle total da ferramenta. 
+
+>O cadastro de gestores do sistema é feito na tabela **CatalogoDominio**. Basta inserir um registro nessa tabela com a coluna classificação preenchida com o valor **‘GestorSistema’** e a coluna descrição preenchida com o id da pessoa que terá perfil de gestor.
 
 # APLICAÇÃO!
 
