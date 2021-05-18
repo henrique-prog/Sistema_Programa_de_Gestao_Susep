@@ -123,7 +123,7 @@ A API é onde estão as regras de negócio, funcionalidades, operações de pers
 ### VALIDAÇÃO DA INSTALAÇÃO –1ª ETAPA
 
 Após instalação e configuração da base de dados e API, recomenda-se a validação dessas etapas pela seguinte URL: 
->**URL da API**/api/v1/dominio/ModalidadeExecucao
+>**URL da Aplicação**/api/api/v1/dominio/ModalidadeExecucao
 
 Se a instalação foi realizada corretamente, deverá retornar um json com as modalidades de trabalho da tabela catálogo domínio.
 
@@ -150,7 +150,7 @@ O Gateway adiciona camadas de segurança, cache e outros recursos à API. É ess
 
 Após instalação e configuração do Gateway, recomenda-se a validação dessa etapa pela seguinte URL: 
 
->**URL da API**/dominio/ModalidadeExecucao
+>**URL da aplicação**/gateway/dominio/ModalidadeExecucao
 
 Se a instalação foi realizada corretamente, deverá retornar um json com as modalidades de trabalho da tabela catálogo domínio (mesmo retorno da validação da API).
 
@@ -168,6 +168,15 @@ O retorno é o possível erro.
 O front-end é a camada de apresentação do sistema. Construída em angular, teoricamente, pode ser publicada em qualquer servidor de aplicação que rode node.js.
 
 ## APP
+
+#### ClientApp\dist\env.js
+Nos dois pontos em que aparece, deve ser alterado de https://sitedoorgao/sisgp/gateway para o caminho do gateway no seu órgão. 
+
+#### ClientApp\dist\Index.html
+A tag base deve ser alterada para refletir o caminho em que a aplicação está publicada entro do site do seu órgão. Exemplo: O acesso à aplicação é feito por meio do caminho https://sitedoorgao/sisgp/app, a tag deve ter o valor /app/.
+
+#### web.config
+A tag action do tipo Rewrite deve ser alterada para refletir o caminho em que a aplicação está publicada entro do site do seu órgão, conforme configuração feita anteriormente para o arquivo index.html.
 
 ### Sequência de passos (pasta “app”)
 
